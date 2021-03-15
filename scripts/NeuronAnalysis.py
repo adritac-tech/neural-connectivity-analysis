@@ -10,16 +10,16 @@ from matplotlib import colors
 from matplotlib.ticker import PercentFormatter
 
 excelData = pd.read_excel(r'/Users/Adrita1/Programs2.0/Internship/Data/CorrectNeuronConnect.xls') #this location varies for the computer
-#TESTING BEGINS HERE
-testData = pd.read_excel(r'/Users/Adrita1/Programs2.0/Internship/Data/Test.xls') #this location varies for the computer
-#testPandas = pd.DataFrame(testData)
-testDataNumpy = testData.to_numpy()
-testIntensity, testCoherance, testFrequency = bct.algorithms.motif3funct_wei(testDataNumpy)
-np.save("testIntensity.npy", testIntensity)
-np.save("testCoherance.npy", testCoherance)
-np.save("testFrequency.npy", testFrequency)
 
-#TESTING ENDS HERE
+# testData = pd.read_excel(r'/Users/Adrita1/Programs2.0/Internship/Data/Test.xls') #this location varies for the computer
+# #testPandas = pd.DataFrame(testData)
+# testDataNumpy = testData.to_numpy()
+# testIntensity, testCoherance, testFrequency = bct.algorithms.motif3funct_wei(testDataNumpy)
+# np.save("testIntensity.npy", testIntensity)
+# np.save("testCoherance.npy", testCoherance)
+# np.save("testFrequency.npy", testFrequency)
+
+# #TESTING ENDS HERE
 chart = pd.DataFrame(excelData, columns = ['Neuron 1','Neuron 2', 'Type', 'Nbr'])
 chart['Neuron 1'] = chart['Neuron 1'].str.upper()
 chart['Neuron 2'] = chart['Neuron 2'].str.upper()
