@@ -241,30 +241,30 @@ np.save("Motif3.npy", motif3)
 np.save("Motif6.npy", motif6)
 
 # #----------------------------------------------------------------------------------------------------------------------
-# x = 0
+x = 0
 
-# bigThickMatrix = np.zeros((1000,numNeurons,numNeurons))
+bigThickMatrix = np.zeros((1000,numNeurons,numNeurons))
 
-# for x in range (1000):
+for x in range (1000):
 
-#     random.seed(a = x)
+    random.seed(a = x)
 
     
-#     bigThickMatrix[x,:,:] = randomization(outputNumpy, neurons)
-#     x = x + 1
+    bigThickMatrix[x,:,:] = randomization(outputNumpy, neurons)
+    x = x + 1
 
-#     print("randomization " , x)
+    print("randomization " , x)
 
-# x = 0
-# np.save("BigMatrix.npy", bigThickMatrix)
+x = 0
+np.save("BigMatrix.npy", bigThickMatrix)
 
-# #-----------------------------------------------------------------------------------------------------
-# output.to_csv("NeuronOutputTest.csv")
+#-----------------------------------------------------------------------------------------------------
+output.to_csv("NeuronOutputTest.csv")
 
-# randomExcel = pd.read_csv (r'C:\Users\Adrita\Programs2.0\Internship\NeuronOutputTest.csv')
-# randomChart = pd.DataFrame(randomExcel, index = neurons, columns = neurons)
+randomExcel = pd.read_csv (r'/Users/Adrita1/github/neural-connectivity-analysis/data/NeuronOutputTest.csv')
+randomChart = pd.DataFrame(randomExcel, index = neurons, columns = neurons)
 
-# randomChart.to_csv("RandomChart.csv")
+randomChart.to_csv("RandomChart.csv")
 
 
 
